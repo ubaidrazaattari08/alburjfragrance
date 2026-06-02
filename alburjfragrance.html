@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Al-Burj Fragrance | Premium Arabic & European Fragrances</title>
+    <meta name="description" content="Premium Arabic and European fragrances by Al-Burj Fragrance. Experience luxury with Oud Al-Burj, Musk Al-Burj and more.">
+    <meta name="keywords" content="perfumes, arabic fragrances, oud, musk, luxury perfumes, pakistan, al-burj">
+    <meta name="author" content="Al-Burj Fragrance">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Al-Burj Fragrance | Premium Arabic & European Fragrances">
+    <meta property="og:description" content="Experience luxury with our premium collection of Arabic and European fragrances.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="alburj_logo.jpeg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: #141414;
+            --accent-gold: #d4af37;
+            --text-light: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --font-luxury: 'Cinzel', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Accessibility - Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 1001;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* TICKER RIBBON */
+        .ticker-wrapper {
+            width: 100%;
+            background-color: var(--accent-gold);
+            color: #000;
+            overflow: hidden;
+            padding: 8px 0;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-text {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 25s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 40px;
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-logo-img {
+            width: 45px;
+            height: auto;
+			}
+
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .logo-text {
+            font-family: var(--font-luxury);
+            font-size: 22px;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon-wrapper {
+            position: relative;
+            color: var(--text-light);
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .cart-icon-wrapper:hover {
+            color: var(--accent-gold);
+        }
+
+        .cart-count {
+            background: var(--accent-gold);
+            color: #000;
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 10px;
+            font-weight: bold;
+            position: absolute;
+            top: -10px;
+            right: -12px;
+        }
+
+        .search-container {
+            margin-top: 0;
+        }
+
+        .search-input {
+            background: #1a1a1a;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 10px 18px;
+            color: #fff;
+            width: 260px;
+            border-radius: 30px;
+            font-family: var(--font-sans);
+            font-size: 13px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .search-input:focus {
+            border-color: var(--accent-gold);
+            width: 280px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        /* HERO BANNER */
+        .hero-banner-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1584 / 550;
+            max-height: 550px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .banner-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-slide.active {
+            opacity: 1;
+        }
+
+        /* TRUST BADGES */
+        .trust-badges {
+            background: #111;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .trust-badges h2 {
+            font-family: var(--font-luxury);
+            color: var(--accent-gold);
+            font-size: 18px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .badges-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .badge-item {
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badge-item i {
+            color: var(--accent-gold);
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-family: var(--font-luxury);
+            color: var(--accent-gold);
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* CATEGORIES BAR */
+        .categories-bar {
+            max-width: 1100px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 20px;
+        }
+        .category-btn {
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--text-muted);
+            padding: 10px 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+            font-weight: 600;
+        }
+        .category-btn:hover, .category-btn.active {
+            background: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
+        }
+
+        /* PRODUCTS GRID */
+        .products-container {
+            max-width: 1300px;
+            margin: 30px auto 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card.hidden {
+            display: none !important;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        /* IMAGE SLIDER INSIDE CARD */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .slider-img {
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .slider-img.active { opacity: 1; }
+        
+        .slider-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 5;
+        }
+        .slider-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .slider-dot.active {
+            background: var(--accent-gold);
+            transform: scale(1.2);
+        }
+
+        .product-info { 
+            padding: 25px; 
+            text-align: center; 
+        }
+        .vibe-tag {
+            font-size: 10px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            color: var(--accent-gold); 
+            margin-bottom: 12px; 
+            display: inline-block;
+            border: 1px solid var(--accent-gold); 
+            padding: 4px 12px; 
+            border-radius: 20px;
+        }
+        .product-title { 
+            font-family: var(--font-luxury); 
+            font-size: 24px; 
+            margin-bottom: 12px; 
+        }
+        .product-description { 
+            font-size: 13px; 
+            color: var(--text-muted); 
+            margin-bottom: 15px; 
+            min-height: 45px;
+            line-height: 1.5;
+        }
+        
+        .stock-status {
+            font-size: 12px;
+            margin-bottom: 15px;
+            background: rgba(255,255,255,0.05);
+            padding: 8px;
+            border-radius: 6px;
+        }
+        .status-avail { 
+            color: #25D366; 
+            font-weight: bold; 
+        }
+        .status-out { 
+            color: #ff4d4d; 
+        }
+
+        .scent-notes { 
+            margin: 15px 0; 
+            font-size: 12px; 
+            border-top: 1px dashed rgba(212, 175, 55, 0.2); 
+            padding-top: 15px; 
+        }
+        .notes-title { 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            margin-bottom: 8px; 
+            color: var(--accent-gold); 
+        }
+        .price-tag { 
+            font-family: var(--font-luxury); 
+            font-size: 22px; 
+            color: var(--accent-gold); 
+            margin: 15px 0; 
+            display: block;
+            font-weight: 700;
+        }
+
+        /* BUTTONS */
+        .btn-group { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 12px; 
+            margin-top: 15px; 
+        }
+        .btn { 
+            padding: 12px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            border: none; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: inline-block; 
+            text-align: center; 
+            font-family: var(--font-sans);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .btn-order { 
+            background-color: var(--accent-gold); 
+            color: #000; 
+        }
+        .btn-order:hover { 
+            background-color: #fff; 
+            transform: scale(1.02);
+        }
+        .btn-whatsapp { 
+            background-color: transparent; 
+            color: var(--text-light); 
+            border: 1px solid rgba(255,255,255,0.3); 
+        }
+        .btn-whatsapp:hover { 
+            background-color: #25D366; 
+            color: #fff; 
+            border-color: #25D366;
+        }
+
+        /* INFO SECTIONS */
+        .info-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 35px;
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+        }
+        .info-section h2 {
+            font-family: var(--font-luxury);
+            color: var(--accent-gold);
+            font-size: 24px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+        .info-section p, .info-section li {
+            font-size: 14px;
+            color: #dcdcdc;
+            margin-bottom: 12px;
+        }
+        .discount-text {
+            color: #25D366;
+            font-weight: 700;
+        }
+
+        /* REVIEW CARDS */
+        .reviews-container {
+            margin: 20px 0;
+        }
+        .review-card {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        .rating {
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .reviewer-name {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* MODAL */
+        .modal {
+            position: fixed;
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modal.open { 
+            opacity: 1; 
+            pointer-events: auto; 
+        }
+        .modal-content {
+            background: #141414;
+            border: 2px solid var(--accent-gold);
+            padding: 35px;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 8px;
+            position: relative;
+        }
+        .modal-content h3 { 
+            font-family: var(--font-luxury); 
+            color: var(--accent-gold); 
+            margin-bottom: 20px; 
+        }
+        .modal-content select, 
+        .modal-content textarea, 
+        .modal-content input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            background: #1a1a1a;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #fff;
+            border-radius: 4px;
+            font-family: var(--font-sans);
+        }
+        .close-modal {
+            position: absolute; 
+            top: 15px; 
+            right: 20px;
+            color: #fff; 
+            font-size: 28px; 
+            cursor: pointer;
+        }
+        .close-modal:hover {
+            color: var(--accent-gold);
+        }
+
+        /* NOTIFICATION */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            z-index: 2001;
+            animation: slideIn 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* BACK TO TOP BUTTON */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--accent-gold);
+            color: #000;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 100;
+            border: none;
+            font-size: 20px;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            background: #fff;
+        }
+
+        /* NO RESULTS MESSAGE */
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-muted);
+            font-size: 18px;
+            grid-column: 1 / -1;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center; 
+            padding: 40px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--text-muted); 
+            font-size: 12px;
+        }
+        footer a { 
+            color: var(--accent-gold); 
+            text-decoration: none; 
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .products-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 20px;
+            }
+            
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+                gap: 25px;
+            }
+            
+            .search-input {
+                width: 100%;
+                max-width: 300px;
+            }
+            .search-input:focus {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .products-container {
+                grid-template-columns: minmax(0, 350px);
+                justify-content: center;
+                padding: 0 15px;
+            }
+            
+            .slider-container {
+                height: 280px;
+            }
+            
+            .product-title {
+                font-size: 20px;
+            }
+            
+            .info-section {
+                margin: 25px 15px;
+                padding: 20px;
+            }
+            
+            .categories-bar {
+                gap: 8px;
+            }
+            
+            .category-btn {
+                padding: 6px 14px;
+                font-size: 10px;
+            }
+            
+            .section-title {
+                font-size: 22px;
+                margin-top: 35px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- TICKER RIBBON -->
+    <div class="ticker-wrapper">
+        <div class="ticker-text">
+            🔥 EID SPECIAL OFFER: FREE SHIPPING ON ALL ORDERS ABOVE RS. 5000! —— EXPERIENCE OUD AL-BURJ: THE ROYAL ESSENCE —— FREE DELIVERY ACROSS PAKISTAN —— CASH ON DELIVERY AVAILABLE!
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <img src="alburj_logo.png" alt="Al-Burj Fragrance Logo" class="brand-logo-img">
+            <div class="logo-text-wrapper">
+                <div class="logo-text">Al-Burj Fragrance</div>
+                <div class="tagline">Where Heritage Meets Luxury</div>
+            </div>
+        </div>
+        
+        <div class="header-actions">
+            <div class="search-container">
+                <input type="text" id="searchPerfume" class="search-input" placeholder="Search for your favorite scent..." aria-label="Search perfumes">
+            </div>
+            <div class="cart-icon-wrapper" onclick="alert('Proceeding to Checkout with ' + cart.length + ' items!')" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" style="display: none;">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner-container">
+        <div class="banner-slide active" style="background-image: url('alburj_banner.jpeg');" aria-label="Hero banner 1"></div>
+        <div class="banner-slide" style="background-image: url('alburj_banner01.jpeg');" aria-label="Hero banner 2"></div>
+        <div class="banner-slide" style="background-image: url('alburj_banner02.jpeg');" aria-label="Hero banner 3"></div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-badges">
+        <h2>Why Choose Us</h2>
+        <div class="badges-grid">
+            <div class="badge-item"><i class="fas fa-truck"></i> Free Delivery</div>
+            <div class="badge-item"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</div>
+            <div class="badge-item"><i class="fas fa-mobile-alt"></i> Easypaisa & JazzCash</div>
+            <div class="badge-item"><i class="fas fa-crown"></i> Premium Quality</div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES FILTER BAR -->
+    <h1 class="section-title" id="mainContent">Featured Collection</h1>
+    <div class="categories-bar">
+        <button class="category-btn active" data-category="all" onclick="filterCategory('all', this)">All Scents</button>
+        <button class="category-btn" data-category="men" onclick="filterCategory('men', this)">For Men</button>
+        <button class="category-btn" data-category="women" onclick="filterCategory('women', this)">For Women</button>
+        <button class="category-btn" data-category="summer" onclick="filterCategory('summer', this)">For Summer</button>
+        <button class="category-btn" data-category="winter" onclick="filterCategory('winter', this)">For Winter</button>
+        <button class="category-btn" data-category="arabic" onclick="filterCategory('arabic', this)">Arabic</button>
+        <button class="category-btn" data-category="oud" onclick="filterCategory('oud', this)">Oud</button>
+        <button class="category-btn" data-category="bestseller" onclick="filterCategory('bestseller', this)">Best Seller</button>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <main class="products-container" id="productsGrid">
+
+        <!-- PRODUCT 1: OUD AL-BURJ -->
+        <div class="product-card" data-tags="men winter arabic oud bestseller">
+            <div class="slider-container" id="slider1">
+                <img src="oud_alburj.jpeg" class="slider-img active" alt="Oud Al-Burj - Front view" loading="lazy">
+                <img src="oud_alburj01.jpeg" class="slider-img" alt="Oud Al-Burj - Bottle design" loading="lazy">
+                <div class="slider-nav" id="nav1"></div>
+            </div>
+            <div class="product-info">
+                <span class="vibe-tag">Arabic Royal Vibe</span>
+                <h2 class="product-title">Oud Al-Burj</h2>
+                <p class="product-description">Deep, majestic, and mystical. A royal signature formulation that exudes absolute luxury.</p>
+                
+                <div class="stock-status">
+                    30ml (<span class="status-out">Out of Stock</span>) | 50ml (<span class="status-avail">Available</span>) | 100ml (<span class="status-out">Out of Stock</span>)
+                </div>
+
+                <div class="scent-notes">
+                    <div class="notes-title">Scent Profile</div>
+                    <p>Top: Saffron & Rose | Heart: Pure Oud | Base: Rich Amber</p>
+                </div>
+                <span class="price-tag">Rs. 8,500</span>
+                <div class="btn-group">
+                    <button class="btn btn-order" onclick="addToCart('Oud Al-Burj', 8500)">Order Now</button>
+                    <a href="https://wa.me/923005465726?text=Salam,%20I%20want%20to%20order%20Oud%20Al-Burj%20(Rs.%208,500)." target="_blank" class="btn btn-whatsapp" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2: MUSK AL-BURJ -->
+        <div class="product-card" data-tags="women summer winter arabic bestseller">
+            <div class="slider-container" id="slider2">
+                <img src="musk_alburj.jpeg" class="slider-img active" alt="Musk Al-Burj - Front view" loading="lazy">
+                <img src="musk_alburj01.jpeg" class="slider-img" alt="Musk Al-Burj - Side view" loading="lazy">
+                <img src="musk_alburj02.jpeg" class="slider-img" alt="Musk Al-Burj - Packaging" loading="lazy">
+                <img src="musk_alburj03.jpeg" class="slider-img" alt="Musk Al-Burj - Detail" loading="lazy">
+                <div class="slider-nav" id="nav2"></div>
+            </div>
+            <div class="product-info">
+                <span class="vibe-tag">Arabic Clean Vibe</span>
+                <h2 class="product-title">Musk Al-Burj</h2>
+                <p class="product-description">A silky, powdery masterpiece. Pure, clean, and ethereal musk blended perfectly for a sophisticated aura.</p>
+                
+                <div class="stock-status">
+                    30ml (<span class="status-out">Out of Stock</span>) | 50ml (<span class="status-avail">Available</span>) | 100ml (<span class="status-out">Out of Stock</span>)
+                </div>
+
+                <div class="scent-notes">
+                    <div class="notes-title">Scent Profile</div>
+                    <p>Top: Powdery Accords | Heart: White Musk | Base: Subtle Sandalwood</p>
+                </div>
+                <span class="price-tag">Rs. 6,500</span>
+                <div class="btn-group">
+                    <button class="btn btn-order" onclick="addToCart('Musk Al-Burj', 6500)">Order Now</button>
+                    <a href="https://wa.me/923005465726?text=Salam,%20I%20want%20to%20order%20Musk%20Al-Burj%20(Rs.%206,500)." target="_blank" class="btn btn-whatsapp" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3: AMBROXAN ELITE -->
+        <div class="product-card" data-tags="men women summer winter bestseller">
+            <div class="slider-container" id="slider3">
+                <img src="luxury_scent.jpeg" class="slider-img active" alt="Ambroxan Elite - Front view" loading="lazy">
+                <img src="luxury_scent01.jpeg" class="slider-img" alt="Ambroxan Elite - Bottle" loading="lazy">
+                <div class="slider-nav" id="nav3"></div>
+            </div>
+            <div class="product-info">
+                <span class="vibe-tag">European Luxury Vibe</span>
+                <h2 class="product-title">Ambroxan Elite</h2>
+                <p class="product-description">A contemporary formulation balancing rich ambroxan raw accords with smooth fresh nuances.</p>
+                
+                <div class="stock-status">
+                    30ml (<span class="status-avail">Available</span>) | 50ml (<span class="status-avail">Available</span>) | 100ml (<span class="status-avail">Available</span>)
+                </div>
+
+                <div class="scent-notes">
+                    <div class="notes-title">Scent Profile</div>
+                    <p>Top: Fresh Bergamot | Heart: Ambroxan Accords | Base: Cedarwood</p>
+                </div>
+                <span class="price-tag">Rs. 7,000</span>
+                <div class="btn-group">
+                    <button class="btn btn-order" onclick="addToCart('Ambroxan Elite', 7000)">Order Now</button>
+                    <a href="https://wa.me/923005465726?text=Salam,%20I%20want%20to%20order%20Ambroxan%20Elite%20(Rs.%207,000)." target="_blank" class="btn btn-whatsapp" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ABOUT US SECTION -->
+    <section class="info-section">
+        <h2><i class="fas fa-store"></i> About Us</h2>
+        <p>Al-Burj Fragrance brings together three years of fragrance manufacturing experience and a new luxury brand vision, blending Arabic heritage with modern European sophistication.</p>
+        <p>Each perfume is carefully crafted using premium ingredients sourced from around the world, ensuring long-lasting performance and unique character.</p>
+    </section>
+
+    <!-- PAYMENT METHODS SECTION -->
+    <section class="info-section">
+        <h2><i class="fas fa-credit-card"></i> Payment Methods</h2>
+        <p><i class="fas fa-truck"></i> <strong>Cash on Delivery:</strong> Available across Pakistan.</p>
+        <p><i class="fas fa-mobile-alt"></i> <strong>Easypaisa:</strong> 03005465726 <span class="discount-text">(Rs. 100 Discount)</span></p>
+        <p><i class="fas fa-mobile-alt"></i> <strong>JazzCash:</strong> 03005465726 <span class="discount-text">(Rs. 100 Discount)</span></p>
+        <p><i class="fas fa-university"></i> <strong>Bank Transfer:</strong> Available on request.</p>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section class="info-section">
+        <h2><i class="fas fa-star"></i> Customer Reviews</h2>
+        <div class="reviews-container" id="reviewsContainer">
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p>"Exceptional longevity and premium quality formulation. The Oud Al-Burj lasts over 12 hours on my skin!"</p>
+                <span class="reviewer-name">- Ahmed R., Lahore</span>
+            </div>
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p>"Elegant bottle styling and incredibly fast delivery. Musk Al-Burj is my daily signature now."</p>
+                <span class="reviewer-name">- Sarah K., Karachi</span>
+            </div>
+            <div class="review-card">
+                <div class="rating">★★★★☆</div>
+                <p>"Ambroxan Elite is perfect for summers. Fresh and sophisticated."</p>
+                <span class="reviewer-name">- Bilal M., Islamabad</span>
+            </div>
+        </div>
+        <button class="btn btn-order" onclick="showReviewForm()" style="margin-top: 15px;">Write a Review</button>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="info-section">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <p><strong>❓ Delivery Time?</strong> 3-5 Working Days across Pakistan.</p>
+        <p><strong>❓ Return Policy?</strong> Valid if the outer packaging remains fully unopened within 7 days.</p>
+        <p><strong>❓ Are these original perfumes?</strong> Yes, all fragrances are manufactured in-house with premium quality ingredients.</p>
+        <p><strong>❓ Do you ship internationally?</strong> Currently serving Pakistan only.</p>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section class="info-section">
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <p><i class="fab fa-whatsapp"></i> <strong>Phone / WhatsApp:</strong> 03005465726</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@alburjfragrance.com</p>
+        <p><i class="fab fa-facebook"></i> <strong>Facebook:</strong> /alburjfragrance</p>
+        <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong> @alburjfragrance</p>
+    </section>
+
+    <!-- TERMS & CONDITIONS MODAL -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h3>Terms & Conditions</h3>
+            <p><strong>1. Delivery Policy:</strong> Standard processing time of 24-48 hours applies. Delivery via secure courier services.</p>
+            <p><strong>2. Quality Assurance:</strong> All products are formulated using pristine ingredients following strict quality metrics.</p>
+            <p><strong>3. Returns:</strong> Returns accepted within 7 days for unopened products only.</p>
+            <p><strong>4. Privacy:</strong> Your personal information is never shared with third parties.</p>
+        </div>
+    </div>
+
+    <!-- REVIEW MODAL -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('reviewModal')">&times;</span>
+            <h3>Write Your Review</h3>
+            <select id="ratingSelect">
+                <option value="5">★★★★★ (5/5) - Excellent</option>
+                <option value="4">★★★★☆ (4/5) - Good</option>
+                <option value="3">★★★☆☆ (3/5) - Average</option>
+                <option value="2">★★☆☆☆ (2/5) - Below Average</option>
+                <option value="1">★☆☆☆☆ (1/5) - Poor</option>
+            </select>
+            <textarea id="reviewText" placeholder="Share your experience with our fragrance..." rows="4"></textarea>
+            <input type="text" id="reviewerName" placeholder="Your Name (Optional)">
+            <button class="btn btn-order" onclick="submitReview()" style="width: 100%; margin-top: 10px;">Submit Review</button>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Al-Burj Fragrance. All Rights Reserved. | <a href="#" onclick="openModal('termsModal'); return false;">Terms & Conditions</a> | <a href="#" onclick="openModal('reviewModal'); return false;">Write a Review</a></p>
+        <p style="margin-top: 15px;">Follow us for exclusive offers!</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Shopping Cart
+        let cart = [];
+        
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price, quantity: 1 });
+            updateCartCount();
+            showNotification(productName + " added to cart!");
+        }
+        
+        function updateCartCount() {
+            let cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                cartCount.textContent = cart.length;
+                cartCount.style.display = cart.length > 0 ? 'inline-block' : 'none';
+            }
+        }
+        
+        function showNotification(message) {
+            // Remove previous notifications first to prevent clutter
+            const oldNotif = document.querySelector('.notification');
+            if (oldNotif) oldNotif.remove();
+
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = '<i class="fas fa-check-circle"></i> ' + message;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+        
+        // Optimized Image Sliders with Dots & Auto-cycle reset
+        function initSlider(containerId, navId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const images = container.querySelectorAll('.slider-img');
+            if (images.length <= 1) return;
+            
+            let currentIndex = 0;
+            const nav = document.getElementById(navId);
+            let intervalId;
+            
+            function changeImage(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = newIndex;
+                images[currentIndex].classList.add('active');
+                if (nav) updateDots(nav, currentIndex);
+            }
+
+            function startInterval() {
+                intervalId = setInterval(() => {
+                    let nextIdx = (currentIndex + 1) % images.length;
+                    changeImage(nextIdx);
+                }, 4000);
+            }
+
+            if (nav) {
+                nav.innerHTML = '';
+                for (let i = 0; i < images.length; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                    dot.onclick = () => {
+                        clearInterval(intervalId); // Stop previous timer
+                        changeImage(i);
+                        startInterval(); // Restart fresh timer
+                    };
+                    nav.appendChild(dot);
+                }
+            }
+            
+            function updateDots(navElement, index) {
+                const dots = navElement.querySelectorAll('.slider-dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+            
+            startInterval();
+        }
+        
+        // Initialize all sliders
+        initSlider('slider1', 'nav1');
+        initSlider('slider2', 'nav2');
+        initSlider('slider3', 'nav3');
+        
+        // Hero Banner Slider
+        const bannerSlides = document.querySelectorAll('.banner-slide');
+        if (bannerSlides.length > 1) {
+            let bannerIdx = 0;
+            setInterval(() => {
+                bannerSlides[bannerIdx].classList.remove('active');
+                bannerIdx = (bannerIdx + 1) % bannerSlides.length;
+                bannerSlides[bannerIdx].classList.add('active');
+            }, 5000);
+        }
+        
+        // Live Search Filter Sync Fix
+        const searchInput = document.getElementById('searchPerfume');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.toLowerCase().trim();
+                const cards = document.querySelectorAll('.product-card');
+                
+                if (query !== "") {
+                    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+                    const allBtn = document.querySelector('.category-btn[data-category="all"]');
+                    if (allBtn) allBtn.classList.add('active');
+                }
+                
+                let visibleCount = 0;
+                cards.forEach(card => {
+                    const title = card.querySelector('.product-title')?.textContent.toLowerCase() || '';
+                    if (title.includes(query)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                showNoResultsMessage(visibleCount);
+            });
+        }
+        
+        // Category Filter Fix (Clears Search query dynamically)
+        function filterCategory(category, buttonElement) {
+            const searchInput = document.getElementById('searchPerfume');
+            if (searchInput) searchInput.value = ""; // Pure reset
+            
+            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+            
+            const cards = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    const tags = card.getAttribute('data-tags')?.split(' ') || [];
+                    if (tags.includes(category)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+            
+            showNoResultsMessage(visibleCount);
+        }
+        
+        function showNoResultsMessage(count) {
+            let msgDiv = document.getElementById('noResultsMsg');
+            if (!msgDiv) {
+                msgDiv = document.createElement('div');
+                msgDiv.id = 'noResultsMsg';
+                msgDiv.className = 'no-results';
+                document.getElementById('productsGrid').after(msgDiv);
+            }
+            msgDiv.style.display = count === 0 ? 'block' : 'none';
+            if (count === 0) {
+                msgDiv.innerHTML = '<i class="fas fa-search"></i> No products found. Please try another category.';
+            }
+        }
+        
+        // Modal Functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add('open');
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.remove('open');
+        }
+        
+        function showReviewForm() {
+            openModal('reviewModal');
+        }
+        
+        function submitReview() {
+            const rating = document.getElementById('ratingSelect')?.value || '5';
+            const reviewText = document.getElementById('reviewText')?.value.trim();
+            const reviewerName = document.getElementById('reviewerName')?.value.trim() || 'Anonymous';
+            
+            if (!reviewText) {
+                showNotification('Please write your review before submitting.');
+                return;
+            }
+            
+            const stars = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const newReview = document.createElement('div');
+            newReview.className = 'review-card';
+            newReview.innerHTML = `
+                <div class="rating">${stars}</div>
+                <p>"${reviewText.substring(0, 200)}"</p>
+                <span class="reviewer-name">- ${reviewerName}</span>
+            `;
+            reviewsContainer.insertBefore(newReview, reviewsContainer.firstChild);
+            
+            document.getElementById('reviewText').value = '';
+            document.getElementById('reviewerName').value = '';
+            closeModal('reviewModal');
+            showNotification('Thank you for your review!');
+        }
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Initialize cart count on load
+        updateCartCount();
+        
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('open');
+            }
+        }
+    </script>
+</body>
+</html>
